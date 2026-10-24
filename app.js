@@ -56,7 +56,7 @@ function render() { const a = $('#app'); a.className = S.m === 'nome' ? 'wide' :
   if (done) { const f = h('div', { class: 'fim' + (done === 'FIM' ? '' : ' error') }, done);
     a.replaceChildren(hdEl, h('section', { class: 'scr' }, f, h('p', { class: 'hint' }, done === 'FIM' ? 'Obrigado por votar.' : ''))); FX.pop(f, 2.2); return; }
   const lab = label();
-  const scr = h('section', { class: 'scr' }, h('div',{class:'screen-top'},h('span',{},'SEU VOTO PARA'),h('span',{class:'status-led'},S.lock ? 'EM ESPERA' : 'URNA ONLINE')), h('h2', {}, 'REPRESENTANTE'),h('p',{class:'round-label'}, (S.stage || 1)+'º TURNO · ELEIÇÃO ESCOLAR'),
+  const scr = h('section', { class: 'scr' }, h('div',{class:'screen-top'},h('span',{},'SEU VOTO PARA'),h('span',{class:'status-led'},S.lock ? 'EM ESPERA' : 'URNA ONLINE')), h('h2', {}, 'PARANINFO'),h('p',{class:'round-label'}, (S.stage || 1)+'º TURNO · ELEIÇÃO ESCOLAR'),
     S.m === 'num' ? h('div', { class: 'num' }, 'NÚMERO', h('div', { class: 'digs' }, h('span', { class: 'd' }, buf[0] || ''), h('span', { class: 'd' }, buf[1] || ''))) : '',
     h('div', { class: 'nm', role: 'status' }, lab),
     S.ok ? '' : pairBox(),
